@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="爱家,照明,灯具"/>
+<title>爱家</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="images/favicon-.ico">
+</head>
+
+<body>
+<!--头部工具区-->
+<div class="topbar wrap">
+	<h1 class="left">
+    	<a href="#"><img src="images/logo.jpg" width="283" height="54" alt=""/></a>
+    </h1>
+    <div class="right">
+            <input id="tipbar_txt" type="text" class="search" value="请输入搜索内容">
+            <button>搜索</button>
+    </div>
+</div>
+<!--头部导航-->
+<header class="header">
+  <div class="header_in wrap">
+    	<ul id="ul">
+        	<li><a href="index.html">首页</a>
+            </li>
+        	<li id="li02"><a href="#">关于我们</a>
+            	<ul id="ul02">
+            		<li><a herf="#">荣誉认证</a></li>
+            		<li><a href="#">组织架构</a></li>
+            		<li><a href="#">发展历程</a></li>
+            		<li><a href="#">企业文化</a></li>
+            		<li><a href="#">公司简介</a></li>
+            		<li><a href="#">门店展示</a></li>
+            	</ul>
+            </li>
+        	<li class="cur" id="li03"><a href="#">新闻中心</a>
+                <ul id="ul03">
+            		<li><a herf="#">行业新闻</a></li>
+            		<li><a href="#">公司新闻</a></li>
+            		<li><a href="#">市场营销</a></li>
+            		<li><a href="#">商学院新闻</a></li>
+            	</ul>
+            </li>
+        	<li id="li04"><a href="#">工程案例</a>
+            	<ul id="ul04">
+            		<li><a herf="#">最新案列</a></li>
+            		<li><a href="#">亮化工程</a></li>
+            		<li><a href="#">室内照明</a></li>
+            		<li><a href="#">商业照明</a></li>
+            	</ul>
+            </li>
+        	<li id="li05"><a href="#">产品世界</a>
+            	<ul id="ul05">
+            		<li><a herf="#">爱家·照明</a></li>
+            		<li><a href="#">爱家·玩美</a></li>
+            		<li><a href="#">爱家·光电</a></li>
+            		<li><a href="#">爱家·浩迪</a></li>
+            		<li><a href="#">东方·欧弗洛</a></li>
+            		<li><a href="#">爱家·爱的家</a></li>
+            	</ul>
+            </li>
+        	<li id="li06"><a href="#">诚聘英才</a>
+            	<ul id="ul06">
+            		<li><a herf="#">人才理念</a></li>
+            		<li><a href="#">最新职位</a></li>
+            		<li><a href="#">培训与发展</a></li>
+            	</ul>
+            </li>
+        	<li><a href="#">联系我们</a></li>
+    	</ul>
+<!--        <div class="line"></div>
+-->    </div>
+</header>
+<!--banner-->
+<div class="bannerall">
+	<figure class="banner" id="app1" @mouseover="stop()" @mouseout="play()">
+        <ul v-bind:style="{width:100*imgs.length+'%',left:-active*100+'%'}">
+            <li v-bind:style="{width:1/imgs.length*100+'%'}" 
+                v-for="(item,index) in imgs">
+                <img v-bind:src="item"/>
+        </ul>
+        <ol>
+            <li v-for="(item,index) in imgs" 
+                v-bind:class="{cur:index==active}"
+                @click="qie(index)"
+            ></li>
+        </ol>
+        <span class="left" @click="left()"></span>
+        <span class="right" @click="right()"></span>
+    </figure>
+</div>
+
+<!--news list-->
+<!--breadnav-->
+<div class="news_list wrap">
+	<div class="breadnav">
+        您所在的位置:  &nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">首页</a> &gt; <a href="#">新闻中心</a> &gt; <a href="#">公司新闻</a> &gt;
+    </div>
+    <h2>新闻中心</h2>
+    <div class="up">
+    	<div class="left">
+        	<ul>
+        		<li class="cur">
+                    <a href="javascript:;">公司新闻</a>
+                    <span></span>
+                </li>
+        		<li>
+                    <a href="javascript:;">行业新闻	</a>
+                    <span></span>
+                </li>
+        		<li>
+                    <a href="javascript:;">市场营销</a>
+                    <span></span>
+                </li>
+        		<li>
+                    <a href="javascript:;">商学院新闻</a>
+                    <span></span>
+                </li>
+        	</ul>
+        </div>
+    	<div class="right" id="app">
+        	<h3>公司新闻</h3>   
+            <dl v-for="(item,index) in lis">
+            	<dt><a href ="javascript:;">{{item.title}}</a></dt>
+            	<dd>
+                    <a href ="javascript:;"><p>{{item.txt}}</p></a>
+                </dd>
+            	<dd>{{item.time}} &nbsp; | &nbsp; 关键词： {{item.k}}</dd>
+            </dl>
+        </div>
+	</div>
+	<div class="down">
+    	<ol>
+    		<li>首页</li>
+    		<li class="cur">1</li>
+    		<li>2</li>
+    		<li>3</li>
+    		<li>4</li>
+    		<li>5</li>
+    		<li>6</li>
+    		<li>7</li>
+    		<li>下一页</li>
+    		<li>末页</li>
+    		<li>1</li>
+    	</ol>
+        <p>共 230页2296条</p>
+    </div>
+</div>
+
+<!--footer-->
+<footer class="footer">
+	<div class="footer_in wrap">
+    	<div class="up">
+        	<dl>
+        		<dt>关于我们</dt>
+        		<dd><a href="javascript:;">荣誉认证</a><span></span></dd>
+        		<dd><a href="javascript:;">组织架构</a><span></span></dd>
+        		<dd><a href="javascript:;">发展历程</a><span></span></dd>
+        		<dd><a href="javascript:;">企业文化</a><span></span></dd>
+        		<dd><a href="javascript:;">公司简介</a><span></span></dd>
+        		<dd><a href="javascript:;">门店展示</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>新闻中心</dt>
+        		<dd><a href="javascript:;">行业新闻</a><span></span></dd>
+        		<dd><a href="javascript:;">公司新闻</a><span></span></dd>
+        		<dd><a href="javascript:;">市场营销</a><span></span></dd>
+        		<dd><a href="javascript:;">商学院新闻</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>工程案例</dt>
+        		<dd><a href="javascript:;">最新案列</a><span></span></dd>
+        		<dd><a href="javascript:;">亮化工程</a><span></span></dd>
+        		<dd><a href="javascript:;">室内照明</a><span></span></dd>
+        		<dd><a href="javascript:;">商业照明</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>产品世界</dt>
+        		<dd><a href="javascript:;">爱家·照明</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·玩美</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·光电</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·浩迪</a><span></span></dd>
+        		<dd><a href="javascript:;">东方·欧弗洛</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·爱的家</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>诚聘英才</dt>
+        		<dd><a href="javascript:;">人才理念</a><span></span></dd>
+        		<dd><a href="javascript:;">最新职位</a><span></span></dd>
+        		<dd><a href="javascript:;">培训与发展</a><span></span></dd>
+        	</dl>
+        </div>
+        <div class="down">
+       	<a herf="javascript:;">设为首页</a> | <a herf="javascript:;">加入收藏 </a>| <a herf="javascript:;">企业邮箱</a> | 中山市爱的华家照明发展有限公司　本站采用今科云平台网站建设技术开发　粤ICP备05043759号 <img src="images/beian.png" width="16" height="16" alt=""/> 粤公网安备44200002005142号 </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/my.js"></script>

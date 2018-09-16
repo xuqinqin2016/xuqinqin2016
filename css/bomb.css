@@ -1,0 +1,48 @@
+.bannerbox{
+	margin: auto;
+	padding: 40px;
+	background: #fff;
+}
+.bannerbox>div{
+	width: 100%;
+	height: 100%;
+}
+.bomb-box {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.bomb-box a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.bomb-box button {
+	border: none;
+	border-radius: 50%;
+	font-family:"黑体";
+	outline: none;
+	width: 40px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	color: white;
+}
+
+.bomb-box button:nth-of-type(1) {
+	left: -40px;
+}
+
+.bomb-box button:nth-of-type(2) {
+	right: -40px;
+}
+
+.bomb-box span {
+	float: left;
+}

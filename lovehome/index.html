@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="爱家,照明,灯具"/>
+<title>爱家</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="images/favicon-.ico">
+
+</head>
+<body>
+<!--头部工具区-->
+<div class="topbar wrap">
+	<h1 class="left">
+    	<a href="#"><img src="images/logo.jpg" width="283" height="54" alt=""/></a>
+    </h1>
+    <div class="right">
+            <input id="tipbar_txt" type="text" class="search" value="请输入搜索内容">
+            <button>搜索</button>
+    </div>
+</div>
+<!--头部导航-->
+<header class="header">
+  <div class="header_in wrap">
+    	<ul id="ul">
+        	<li class="cur"><a href="#">首页</a>
+            </li>
+        	<li id="li02"><a href="#">关于我们</a>
+            	<ul id="ul02">
+            		<li><a herf="#">荣誉认证</a></li>
+            		<li><a href="#">组织架构</a></li>
+            		<li><a href="#">发展历程</a></li>
+            		<li><a href="#">企业文化</a></li>
+            		<li><a href="#">公司简介</a></li>
+            		<li><a href="#">门店展示</a></li>
+            	</ul>
+            </li>
+        	<li id="li03"><a href="list.html">新闻中心</a>
+                <ul id="ul03">
+            		<li><a herf="#">行业新闻</a></li>
+            		<li><a href="#">公司新闻</a></li>
+            		<li><a href="#">市场营销</a></li>
+            		<li><a href="#">商学院新闻</a></li>
+            	</ul>
+            </li>
+        	<li id="li04"><a href="#">工程案例</a>
+            	<ul id="ul04">
+            		<li><a herf="#">最新案列</a></li>
+            		<li><a href="#">亮化工程</a></li>
+            		<li><a href="#">室内照明</a></li>
+            		<li><a href="#">商业照明</a></li>
+            	</ul>
+            </li>
+        	<li id="li05"><a href="#">产品世界</a>
+            	<ul id="ul05">
+            		<li><a herf="#">爱家·照明</a></li>
+            		<li><a href="#">爱家·玩美</a></li>
+            		<li><a href="#">爱家·光电</a></li>
+            		<li><a href="#">爱家·浩迪</a></li>
+            		<li><a href="#">东方·欧弗洛</a></li>
+            		<li><a href="#">爱家·爱的家</a></li>
+            	</ul>
+            </li>
+        	<li id="li06"><a href="#">诚聘英才</a>
+            	<ul id="ul06">
+            		<li><a herf="#">人才理念</a></li>
+            		<li><a href="#">最新职位</a></li>
+            		<li><a href="#">培训与发展</a></li>
+            	</ul>
+            </li>
+        	<li><a href="#">联系我们</a></li>
+    	</ul>
+<!--        <div class="line"></div>
+-->    </div>
+</header>
+<!--banner-->
+<div class="bannerall">
+	<figure class="banner" id="app1" @mouseover="stop()" @mouseout="play()">
+        <ul v-bind:style="{width:100*imgs.length+'%',left:-active*100+'%'}">
+            <li v-bind:style="{width:1/imgs.length*100+'%'}" 
+                v-for="(item,index) in imgs">
+                <img v-bind:src="item"/>
+        </ul>
+        <ol>
+            <li v-for="(item,index) in imgs" 
+                v-bind:class="{cur:index==active}"
+                @click="qie(index)"
+            ></li>
+        </ol>
+        <span class="left" @click="left()"></span>
+        <span class="right" @click="right()"></span>
+    </figure>
+</div>
+
+<!--title-->
+<div class="about wrap">
+    <span class="tit">
+        <h2>关于我们</h2>
+        <p>ABOUT US</p>
+    </span>
+    <dl>
+    	<dt>
+            <img src="images/house.jpg" alt=""/> </dt>
+    	<dd>
+        	<p>公司自成立以来，一直保持良好的发展势头，拥有一支高素质的设计师队伍，自建厂房占地10000多平方米，目前已发展成为中国现代家居照明灯饰行业知名度最高影响力最深的领军品牌之一。
+            </p>
+            <p>本着为社会创造价值，为客户创造财富的原则，2010年公司进一步拓宽市场格局，继原有的现代LED水晶灯“爱家·爱的家”、后现代低压水晶灯“爱家·玩美灯饰”、独具特色柔材卧室灯“爱家·东方花烛”、现代简约铝材灯“爱家·名匠”四大品牌之后，公司今年高调推出了以节能、环保、低碳、安全为主的LED大功率《醒——星子》系列产品，《醒——星子》系列是“爱家·爱的家”品牌系列之一，以大功率LED科技为主光源，充分体现“节能减排”的时尚概念，体现着公司未来的发展理念：节能，从家庭开始！
+            </p>
+            <p>这五大品牌产品各具特色，风格迥异，又相互映衬，全方位、多层面引领和满足消费者对家居照明灯饰的个性化需求。
+            </p>
+            <p>结合现代照明科技与时尚创意的设计风格，提供现代、简约、个性的产品，服务于顾客，为大众营造温馨的家居生活氛围，成为一家行销全球的知名家居照明公司，是我们发展的目标。热忱欢迎海内外客户和朋友来电来函垂询，携手共创光辉事业！
+            </p>
+        </dd>
+    </dl>
+    
+</div>
+<div class="news">
+    <div class="news_in wrap">
+        <span class="tit">
+            <h2>新闻中心</h2>
+            <p>NEWS</p>
+        </span>
+        <span class="zhong">
+            <div class="left">行业新闻</div>
+            <span class="line"></span>
+            <div class="right"><a href="javascript:;">更多 &nbsp;&gt;&gt;</a></div>
+        </span>
+        <div class="down">
+            <div class="left"><img src="images/news01.jpg" width="500" height="345" alt=""/></div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="javascript:;">不减持！聚飞、洲明控股股东承诺</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">灯泡变三角形！Nanoleaf照明系统于CES刷创新感...</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">外资：全球LED供需失衡将逐步缩小 2018年差距缩至...</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">1-10月全国灯具及照明装置累计进口额揭秘</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">上半年579家LED企业亏损 定制化乃突破之道？</a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;"> OLED、激光与液晶电视上演“三国杀”</a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">夺银后又摘金 大叶大学研发结合LED的复健弹力带</a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">广州质监局公布LED灯具抽查结果</a>
+                        <p> 2018-7-5</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">Nikkiso将携手台塑在台建深紫外LED工厂</a>
+                        <p> 2018-7-5</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <span class="zhong">
+            <div class="left">公司新闻</div>
+            <span class="line"></span>
+            <div class="right"><a href="javascript:;">更多 &nbsp;&gt;&gt;</a></div>
+        </span>
+        <div class="down">
+            <div class="left"><img src="images/news02.jpg" width="1024" height="683" alt=""/></div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="javascript:;">横栏镇女企业家协会成立大会</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">传统产业淘汰OR升级 古镇如何抉择？</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">LED已无技术门槛 古镇一条街全搞定</a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">中山前10月灯饰出口逆势增34.6% </a>
+                        <p> 2018-7-7</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">10月份古镇灯饰价格指数出炉！</a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;"> 古镇首届灯光文化节将于本月下旬开幕 28个景点亮相</a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">古镇灯饰报专访爱的华家照明董事长华云光-“堵”与“导”的哲学... </a>
+                        <p> 2018-7-6</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">摘自横栏正妇联：横栏镇女企业家情系重病特困母亲...</a>
+                        <p> 2018-7-5</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">爱家照明总经理李凌燕慈善活动之行，传递正能量...</a>
+                        <p> 2018-7-5</p>
+                    </li>
+                    <li>
+                        <a href="javascript:;">爱家照明董事长华云光参观访问爱的华衡阳专卖店...</a>
+                        <p> 2018-7-5</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="case wrap">
+    <span class="tit">
+        <h2>工程案例</h2>
+        <p>CASE</p>
+    </span>
+    <dl>
+    	<dt>
+        	<a href="javascript:;"><img src="images/case01.jpg" width="259" height="272" alt=""/></a>
+            <span class="up"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+            <span class="down"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+        </dt>
+    	<dd>酒店大堂</dd>
+    </dl>
+    <dl>
+    	<dt>
+        	<a href="javascript:;"><img src="images/case02.jpg" width="259" height="272" alt=""/></a>
+            <span class="up"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+            <span class="down"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+        </dt>
+    	<dd>现代客厅</dd>
+    </dl>
+    <dl>
+    	<dt>
+        	<a href="javascript:;"><img src="images/case03.jpg" width="259" height="272" alt=""/></a>
+            <span class="up"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+            <span class="down"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+        </dt>
+    	<dd>简约客厅</dd>
+    </dl>
+    <dl>
+    	<dt>
+        	<a href="javascript:;"><img src="images/case04.jpg" width="259" height="272" alt=""/></a>
+            <span class="up"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+            <span class="down"><img src="images/case border.png" width="57" height="87" alt=""/></span>
+        </dt>
+    	<dd>现代卧室</dd>
+    </dl>
+</div>
+<div class="products wrap">
+    <span class="tit">
+        <h2>产品世界</h2>
+        <p>PRODUCTS</p>
+    </span>
+    <div class="dl"> 
+        <dl class="cur">
+            <dt>
+                <a href="javascript:;"><img src="images/product01.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>爱家·照明-65003MX-57W-D</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="javascript:;"><img src="images/product02.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>东方·欧弗洛-OFL6075-6H</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="javascript:;"><img src="images/product03.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>爱的华·浩迪-81008MX-L-25W</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="javascript:;"><img src="images/product04.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>爱家·照明-61016MX-30W-D小圆</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="javascript:;"><img src="images/product05.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>爱家·照明-65002MX-20W-D</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="javascript:;"><img src="images/product06.jpg" width="398" height="256" alt=""/></a>
+            </dt>
+            <dd>爱家·玩美-WMD3612-10+5灯头</dd>
+        </dl>
+    </div>
+</div>
+<footer class="footer">
+	<div class="footer_in wrap">
+    	<div class="up">
+          <dl>
+        		<dt>关于我们</dt>
+        		<dd><a href="javascript:;">荣誉认证</a><span></span></dd>
+        		<dd><a href="javascript:;">组织架构</a><span></span></dd>
+        		<dd><a href="javascript:;">发展历程</a><span></span></dd>
+        		<dd><a href="javascript:;">企业文化</a><span></span></dd>
+        		<dd><a href="javascript:;">公司简介</a><span></span></dd>
+        		<dd><a href="javascript:;">门店展示</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>新闻中心</dt>
+        		<dd><a href="javascript:;">行业新闻</a><span></span></dd>
+        		<dd><a href="javascript:;">公司新闻</a><span></span></dd>
+        		<dd><a href="javascript:;">市场营销</a><span></span></dd>
+        		<dd><a href="javascript:;">商学院新闻</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>工程案例</dt>
+        		<dd><a href="javascript:;">最新案列</a><span></span></dd>
+        		<dd><a href="javascript:;">亮化工程</a><span></span></dd>
+        		<dd><a href="javascript:;">室内照明</a><span></span></dd>
+        		<dd><a href="javascript:;">商业照明</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>产品世界</dt>
+        		<dd><a href="javascript:;">爱家·照明</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·玩美</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·光电</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·浩迪</a><span></span></dd>
+        		<dd><a href="javascript:;">东方·欧弗洛</a><span></span></dd>
+        		<dd><a href="javascript:;">爱家·爱的家</a><span></span></dd>
+        	</dl>
+       	  <dl>
+        		<dt>诚聘英才</dt>
+        		<dd><a href="javascript:;">人才理念</a><span></span></dd>
+        		<dd><a href="javascript:;">最新职位</a><span></span></dd>
+        		<dd><a href="javascript:;">培训与发展</a><span></span></dd>
+        	</dl>
+        </div>
+        <div class="down">
+       	<a herf="javascript:;">设为首页</a> | <a herf="javascript:;">加入收藏 </a>| <a herf="javascript:;">企业邮箱</a> | 中山市爱的华家照明发展有限公司　本站采用今科云平台网站建设技术开发　粤ICP备05043759号 <img src="images/beian.png" width="16" height="16" alt=""/> 粤公网安备44200002005142号 </div>
+    </div>
+</footer>
+ 
+
+
+</body>
+</html>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/my.js"></script>
+
+
+
+
+
+
+
