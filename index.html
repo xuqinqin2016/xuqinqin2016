@@ -1,20 +1,422 @@
----
-layout: default
----
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>徐琴琴个人站</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/bomb.css">
+<link rel="stylesheet" type="text/css" href="css/lc_lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/swiper.js"></script>
+<script src="js/swiper.animate1.0.3.min.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-bomb.js"></script>
+<script src="js/lc_lightbox.lite.min.js"></script>
+</head>
 
-<div class="main-post-list hidden">
+<body>
+<div class="swiper-container all" >
+    <div class="swiper-wrapper">
+    	<!--第一屏-->
+        <div class="swiper-slide con1">
+        	<!--鼠标hover产生气泡-->
+        	<canvas id="canvas"></canvas>
+        	<!--paopao-->
+            <div class="popo">
+                <img class="leaves leave01" src="images/popo/paopao1.png" width="92" height="91" alt=""/> 
+                <img class="leaves leave02" src="images/popo/paopao2.png" width="92" height="91" alt=""/> 
+                <img class="leaves leave03" src="images/popo/paopao3.png" width="85" height="84" alt=""/>
+                <img class="leaves leave04" src="images/popo/paopao4.png" width="80" height="80" alt=""/>
+                <img class="leaves leave05" src="images/popo/paopao5.png" width="35" height="34" alt=""/>
+                <img class="leaves leave06" src="images/popo/paopao6.png" width="35" height="34" alt=""/>
+                <img class="leaves leave07" src="images/popo/paopao7.png" width="85" height="84" alt=""/>
+                <img class="leaves leave08" src="images/popo/paopao8.png" width="85" height="84" alt=""/>
+                <img class="leaves leave09" src="images/popo/paopao9.png" width="35" height="34" alt=""/>
+                <img class="leaves leave10" src="images/popo/paopao6.png" width="35" height="34" alt=""/>
+                <img class="leaves leave11" src="images/popo/paopao11.png" width="55" height="54" alt=""/>
+                <img class="leaves leave12" src="images/popo/paopao12.png" width="80" height="79" alt=""/>
+              </div>
+        </div>
+        <!--第二屏skill-->  
+        <div class="swiper-slide con2">
+            <div class="stars">
+              <div class="wrap">
+                    <h2><img class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s" src="images/nav01.png" width="1200" height="50" alt=""/></h2>
+                    <ul>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="0.2s"><div><img src="images/jn_01.png" width="298" height="244" alt=""/></div></li>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="0.4s"><div><img src="images/jn_02.png" width="298" height="244" alt=""/></div></li>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="0.6s"><div><img src="images/jn_03.png" width="298" height="244" alt=""/></div></li>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="0.8s"><div><img src="images/jn_04.png" width="298" height="244" alt=""/></div></li>
+                    </ul>
+                    <ul>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="1s"><div><img src="images/jn_05.png" width="298" height="244" alt=""/></div></li>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="1.2s"><div><img src="images/jn_06.png" width="298" height="244" alt=""/></div></li>
+                        <li class="ani" 
+                        swiper-animate-effect="bounceInDown" 
+                        swiper-animate-duration="1s"
+                        swiper-animate-delay="1.4s"><div><img src="images/jn_07.png" width="298" height="244" alt=""/></div></li>
+                    </ul>
+                    <ul>
+                            <li class="ani" 
+                            swiper-animate-effect="bounceInDown" 
+                            swiper-animate-duration="1s"
+                            swiper-animate-delay="1.6s"><div><img src="images/jn_08.png" width="298" height="244" alt=""/></div></li>
+                            <li class="ani" 
+                            swiper-animate-effect="bounceInDown" 
+                            swiper-animate-duration="1s"
+                            swiper-animate-delay="1.8s"><div><img src="images/jn_09.png" width="298" height="244" alt=""/></div></li>
+                      </ul>
+                    <!--海草-->
+                    <div class="bg">
+                          <img src="images/bgbg01.png" width="1920" height="200" alt=""/>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!--第三屏banner-->
+        <div class="swiper-slide con3">
+        	<div class="wrap">
+            	<h2><img class="ani" 
+                	swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.2s" src="images/nav02.png" width="1200" height="50" alt=""/></h2>
+                <div class="bannerbox ani"
+                	swiper-animate-effect="zoomInDown" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.2s">
+                    <div class="bannerbox_in">
+                       <ul>
+                            <li><a href="#"><img src="images/banner/banner01.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner02.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner03.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner07.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner05.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner08.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner04.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner06.jpg" width="1000" height="400" alt=""/></a></li>
+                            <li><a href="#"><img src="images/banner/banner09.jpg" width="1000" height="400" alt=""/></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <!--人-->
+                <div class="people"><img src="images/people.png" width="360" height="301" alt=""/></div>
+                 <!--海草-->
+                <div class="bg">
+                      <img src="images/bgbg01.png" width="1920" height="200" alt=""/>
+                </div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
 
-  <ol class="post-list">
-    {% for post in paginator.posts %}
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></h2>
-      <p class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
-      <div class="post-list__meta"><time datetime="{{post.date | date: date_to_xmlschema}}" class="post-list__meta--date date">{{ post.date | date: "%F"}}</time> &#8226; <span class="post-list__meta--tags tags">{{ post.tags | join:' ' }}</span><a class="btn-border-small" href={{ post.url }}>继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-    {% endfor %}
-  </ol>
+          </div>
+        </div>
+        <!--第四屏icon-->
+        <div class="swiper-slide con4">
+        	<div class="wrap">
+            	<h2><img
+                    class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s"                  
+                    src="images/nav03.png" width="1200" height="50" alt=""/></h2>
+                <div class="iconbox">
+                <div class="content">
+                    <a class="elem" href="images/icon/icon01.jpg" title="相机"  data-lcl-thumb="images/icon/icon01.jpg"> <span style="background-image: url(images/icon/icon01.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon02.jpg" title="灯泡"  data-lcl-thumb="images/icon/icon02.jpg"> <span style="background-image: url(images/icon/icon02.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon03.jpg" title="七星瓢虫"  data-lcl-thumb="images/icon/icon03.jpg"> <span style="background-image: url(images/icon/icon03.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon04.jpg" title="鸡蛋"  data-lcl-thumb="images/icon/icon04.jpg"> <span style="background-image: url(images/icon/icon04.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon05.jpg" title="唱片机"  data-lcl-thumb="images/icon/icon05.jpg"> <span style="background-image: url(images/icon/icon05.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon06.jpg" title="喇叭"  data-lcl-thumb="images/icon/icon06.jpg"> <span style="background-image: url(images/icon/icon06.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon07.jpg" title="音乐"  data-lcl-thumb="images/icon/icon07.jpg"> <span style="background-image: url(images/icon/icon07.jpg)"></span> </a> 
+                    <a class="elem" href="images/icon/icon08.jpg" title="时钟"  data-lcl-thumb="images/icon/icon08.jpg"> <span style="background-image: url(images/icon/icon08.jpg)"></span> </a> 
+               
+                </div>
+            </div>
+            </div>
+                 <!--海草-->
+                <div class="bg">
+                      <img src="images/bgbg01.png" width="1920" height="200" alt=""/>
+                </div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
+        </div>
+        <!--第五屏APP1-->
+        <div class="swiper-slide con5">
+        	<div class="wrap">
+            	<h2>
+                    <img 
+                    class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s"                     
+                    src="images/nav04.png" width="1200" height="50" alt=""/>
+                </h2>
+                <div class="swiper-container app">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/APP01/APP01.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP02.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP03.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP04.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP05.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP06.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP07.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP08.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP09.jpg" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP01/APP10.jpg" width="750" height="1334" alt=""/></div>
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+	            </div>
+            	<div class="phone"><img src="images/phone8.png" width="3402" height="5630" alt=""/></div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第六屏APP2-->
+        <div class="swiper-slide con5">
+        	<div class="wrap">
+            	<h2>
+                    <img 
+                    class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s"                     
+                    src="images/nav04.png" width="1200" height="50" alt=""/>
+                </h2>
+                <div class="swiper-container app">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/APP02/app01.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app02.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app03.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app04.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app05.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app06.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app07.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app08.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app09.PNG" width="750" height="1334" alt=""/></div>
+                        <div class="swiper-slide"><img src="images/APP02/app10.PNG" width="750" height="1334" alt=""/></div>
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+	            </div>
+            	<div class="phone"><img src="images/phone8.png" width="3402" height="5630" alt=""/></div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第八屏web-->
+        <div class="swiper-slide con6">
+        	<div class="wrap">
+                <h2><img 
+                    class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s"                 
+                    src="images/nav05.png" width="1200" height="50" alt=""/></h2>
+                <div class="content">
+                    <ul id="app" 
+                            class="list ani" 
+                            swiper-animate-effect="zoomIn" 
+                            swiper-animate-duration="0.4s"
+                            swiper-animate-delay="0.2s">
+                        <li :class="{box:active}">
+                            <a href="images/web/web01.jpg" target="_blank">
+                                <img src="images/web/web01.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="images/web/web02.jpg" target="_blank">
+                                <img src="images/web/web02.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li 
+                            :class="{box:active}">
+                            <a href="images/web/web03.jpg" target="_blank">
+                                <img src="images/web/web03.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="images/web/web04.jpg" target="_blank">
+                                <img src="images/web/web04.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="lovehome/index.html" target="_blank">
+                                <img src="images/web/web05.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="lovehome/list.html" target="_blank">
+                                <img src="images/web/web06.png" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="SUPOR/index.html" target="_blank">
+                                <img src="images/web/web07.png" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                        <li :class="{box:active}">
+                            <a href="images/web/web08.jpg" target="_blank">
+                                <img src="images/web/web08.jpg" width="280" alt="">
+                                <p></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <!--海草-->
+                <div class="bg">
+                      <img src="images/bgbg01.png" width="1920" height="200" alt=""/>
+                </div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第九屏contact-->   
+        <div class="swiper-slide con7 con9">
+       	  <div class="wrap">
+            	<h2><img 
+                    class="ani" 
+                    swiper-animate-effect="flipInX" 
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.3s"                 
+                    src="images/nav06.png" width="1200" height="50" alt=""/>
+                </h2>
+              <ul class="cont">
+                  <li class="li01">
+                        <h2>NO.01</h2>
+                        <p>扫一扫</p>
+                        <img src="images/wx.png" alt="">
+                        <p>最时尚  最友好</p>
+                    </li>
+                    <li class="li02">
+                        <h2>NO.02</h2>
+                        <p>加QQ</p>
+                        <img src="images/qq.png" alt="">
+                        <p>QQ:734760853</p>
+                    </li>
+                    <li class="li03">
+                        <h2>NO.03</h2>
+                        <p>发E-MAIL</p>
+                        <img src="images/email.png" alt="">
+                        <p>18895318398@163.com</p>
+                    </li>
+                    <li class="li04">
+                        <h2>NO.04</h2>
+                        <p>CALL ME</p>
+                        <img src="images/ip.png" alt="">
+                        <p>18613373798</p>
+                    </li>
+                </ul>
+                <div class="swiper-container app">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+             	</div>
+                 <!--海草-->
+                <div class="bg">
+                      <img src="images/bgbg01.png" width="1920" height="200" alt=""/>
+                </div>
+                <!--鱼-->
+                <div class="fish">
+                    <div class="fil">
+                        <img class="fish01" src="images/finsh_03.png" width="150" height="100" alt=""/>
+                        <img class="fish02" src="images/finsh_02.png" width="100" height="75" alt=""/>
+                    </div>
+                    <div class="fir">
+                        <img class="fish03" src="images/finsh_01.png" width="150" height="100" alt=""/> 
+                    </div>
+                </div>
 
-  {% include pagination.html %}
-
+            </div>
+         </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination dot"></div>
+    <div class="swiper-pagination nav"></div>
 </div>
+
+<!--音乐-->
+<div class="audio">
+	<img src="images/music.png" width="200" height="200" alt=""/>
+	<audio src="music/hongyuan.m4a"></audio>
+</div>
+
+<script src="js/my.js"></script>
+<script src="js/vue.js"></script>
+</body>
+</html>
