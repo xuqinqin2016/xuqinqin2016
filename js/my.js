@@ -1,178 +1,208 @@
-// JavaScript Document
-
 $(function(){
+	new Swiper ('.swiper-container', {
+	    loop: true,
+		autoplay: {
+			disableOnInteraction: false,
+		},
+	    // 濡傛灉闇€瑕佸垎椤靛櫒
+	    pagination: {
+	      el: '.swiper-pagination',
+	    },
+	    
+	    // 濡傛灉闇€瑕佸墠杩涘悗閫€鎸夐挳
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	    
+	    // 濡傛灉闇€瑕佹粴鍔ㄦ潯
+	    scrollbar: {
+	      el: '.swiper-scrollbar',
+	    },
+	  })  
+
+
+
+	$('.mian .left li').eq(1).removeClass('xianshi')
+	$('.mian .right li').click(function(e) {
+		$(this).addClass("cur").siblings().removeClass("cur")
+		$('.mian .left li').eq($(this).index()).addClass("xianshi").siblings().removeClass("xianshi")
+			new Swiper ('.swiper-container.swiper-container03', {
+	    loop: true,
+		autoplay: {
+			disableOnInteraction: false,
+		},
+	    // 濡傛灉闇€瑕佸垎椤靛櫒
+	    pagination: {
+	      el: '.swiper-pagination.swiper-container03',
+	    },
+	    
+	    // 濡傛灉闇€瑕佸墠杩涘悗閫€鎸夐挳
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	    
+	    // 濡傛灉闇€瑕佹粴鍔ㄦ潯
+	    scrollbar: {
+	      el: '.swiper-scrollbar',
+	    },
+	  })  
+
+	});
 	
-	;(function(){	
-		var mySwiper = new Swiper ('.all', {
-			direction: 'vertical',//垂直
-			loop: true, //无缝
-			effect : 'slide', //slide cube coverflow  flip
-			mousewheel: true, //鼠标中键（滚轮）
-			keyboard : true, //键盘 上下左右    
-			pagination: {
-			  el: '.swiper-pagination',
-			  clickable :true,
-			},
-			on:{
-			  init: function(){
-				swiperAnimateCache(this); //隐藏动画元素 
-				swiperAnimate(this); //初始化完成开始动画
-			  }, 
-			  slideChangeTransitionEnd: function(){ 
-				swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-			  } 
-			}
-		  }) 
-	})();
 	
-	$('.bannerbox_in').bomb();
-	
-	;(function(){
-	// icon展示调用
-	lc_lightbox('.elem', {
-		wrap_class: 'lcl_fade_oc',
-		gallery : true,	
-		thumb_attr: 'data-lcl-thumb', 
+})   
+
+;(function(){	
+
+	var num = 0;
+	$(".icon .left").click(function(){	
+		num++;
+		if(num>6){num=0}
+		$(".slipe .slipe_in").stop().animate({marginLeft:-469*num+"px"},500);
+		})
 		
-		skin: 'minimal',
-		radius: 0,
-		padding	: 0,
-		border_w: 0,
+	$(".icon .right").click(function(){	
+		num--;
+		if(num<0){num=6}
+		$(".slipe .slipe_in").stop().animate({marginLeft:-469*num+"px"},500);
+		})
+
+})();
+;(function(){
+	$(".app_all .txt li").click(function(){
+		var index = $(this).index();
+		$(this).addClass("cur").siblings().removeClass("cur");	
+		$(".app_bo").eq(index).addClass("active").siblings().removeClass("active");	
+	});	
+})();
+;(function(){
+	$(".nav_in ul li").click(function(){
+		var index = $(this).index();
+		$(this).addClass("cur").siblings().removeClass("cur");	
 	});	
 })();
 
-	;(function(){	
-		var mySwiper = new Swiper ('.app', {
-			loop: true, //无缝
-			autoplay: {
-				disableOnInteraction: false,
-			},
-			coverflowEffect: {
-				stretch: 0,
-			},
-			effect : 'coverflow', //slide  coverflow cube flip
-			slidesPerView: 5,
-			// 如果需要前进后退按钮
-			navigation: {
-			  nextEl: '.swiper-button-next',
-			  prevEl: '.swiper-button-prev',
-			}
-		  })        
+//app1
+;(function(){	
 
-	})();
+	var num = 0;
+		
+	var timer = null;	
 	
-	//音乐控制
-	;(function(){
-		$('.audio').click(function(e) {
-			//判断音乐播放状态 如果默认不播放,让它播放
-			if($('audio').get(0).paused == true){	
-				$(this).css('animation-play-state','running')
-				$('audio').get(0).play()
-			}else{	
-				$(this).css('animation-play-state','paused')
-				$('audio').get(0).pause()
-			}
-		});
-	})();
-	//第一屏paopao
-	;(function(){
-		var canvas = document.getElementById("canvas");
-		var context = canvas.getContext("2d");				
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;		
-		var colors = ['#69d2e7','#b3bff7','#ffee91','#2db5e4','#7bb4e3','#bdf6fd','#f38630']
-		var balls = [];
-		var timer = null;
-		var btn = true;
-		/**
-		* 一个气泡
-		*var ball = {	
-		*	x:x轴坐标
-		*	y:y轴坐标
-		*	r:初始半径
-		*	color:颜色
-		*	vx:x轴速度
-		*	vy:y轴速度
-		}
-		*/
-		//画圆函数
-		function draw(ball){
-			context.beginPath();
-			context.arc(ball.x,ball.y,ball.r,0,Math.PI*2);
-			context.fillStyle = ball.color;
-			context.globalCompositeOperation = "lighter";//多个气泡叠加高亮
-			context.fill();
-		}		
-		canvas.onmousemove = function(ev){
-			//创建气泡
-			for(var i = 0;i<2;i++){
-				var ball = {
-					x:rnd(-5,5)+ev.clientX,
-					y:rnd(-5,5)+ev.clientY,
-					r:rnd(10,45),
-					color:colors[rnd(0,colors.length-1)],
-					vx:Math.random()-0.5,
-					vy:Math.random()-0.5					
-				}							
-				balls.push(ball);
-				//判断ball数量，减少耗电脑性能,气泡最多的数量200个，并将旧的删除
-				if(balls.length>200){
-					balls.shift();
-				}
-			}
-		}
-		//绘制气泡		
-		if(btn){
-			clearInterval(timer);
-			timer = setInterval(
-			function(){
-				drawball()
-			},30)
-			btn = false;
-		}				
-		function drawball(){
-			context.clearRect(0,0,canvas.width,canvas.height)
-			for (var i = 0 ;i<balls.length;i++){
-				balls[i].x += balls[i].vx*8;//泡泡的分散
-				balls[i].y += balls[i].vy*8;
-				balls[i].r *= 0.94;
-				draw(balls[i])
-				//小小的删除不显示
-				if(balls[i].r<1){	
-					balls.splice(i,1)
-				}
-			}
-			if(balls.length<0){
-				clearInterval(timer);
-				btn = true;
-			}
-		}	
-		//随机函数
-		function rnd(min,max){
-			return Math.round(Math.random()*(max-min)+min);
-		}		
-	})();
+	var len = $(".app_bo1 ul li").length;
 	
-	//vue控制class
-	;(function(){
-			var vm = new Vue({
-				el:'#app',
-				data:{
-					active:true
-				},
-				methods:{
-					qie(){
-						this.active = !this.active;
-					}
-				}
-			})
+	function autoplay(){	
 	
+		timer = setInterval(function(){
+		
+			num++;	
+				
+			if(num>len-1){num = 0}
+						
+			$(".app_bo1 .app_in ul").animate({"margin-left":-350*num+"px"});		
+				
+			$(".app_bo1 .title li").eq(num).addClass("cur").siblings().removeClass("cur");
+			
+			
+		},2000);			
+	}	
 	
+	autoplay();
+		
+	$(".app_bo1").hover(function(e) {
+		
+		clearInterval(timer);
+        
+    },function(e) {
+		
+		autoplay();
+        
+    });	
 	
-	})();
+})();	
+//app2
+;(function(){	
 
+	var num = 0;
+		
+	var timer = null;	
 	
-})
+	var len = $(".app_bo2 ul li").length;
+	
+	function autoplay(){	
+	
+		timer = setInterval(function(){
+		
+			num++;	
+				
+			if(num>len-1){num = 0}
+						
+			$(".app_bo2 .app_in ul").animate({"margin-left":-350*num+"px"});		
+				
+			$(".app_bo2 .title li").eq(num).addClass("cur").siblings().removeClass("cur");
+			
+			
+		},2000);			
+	}	
+	
+	autoplay();
+		
+	$(".app_bo2").hover(function(e) {
+		
+		clearInterval(timer);
+        
+    },function(e) {
+		
+		autoplay();
+        
+    });	
+	
+})();	
+//nav切换至相应页面
+;(function(){	
+	$(".nav_in ul li:eq(0)").click(function(){	
+		$("html,body").animate({scrollTop:0});
+	});
+	$(".nav_in ul li:eq(1)").click(function(){	
+		$("html,body").animate({scrollTop:1100});
+	});
+	$(".nav_in ul li:eq(2)").click(function(){	
+		$("html,body").animate({scrollTop:1860});
+	});
+	$(".nav_in ul li:eq(3)").click(function(){	
+		$("html,body").animate({scrollTop:2720});
 
+	});
+	$(".nav_in ul li:eq(4)").click(function(){	
+		$("html,body").animate({scrollTop:3580});
+	});
+	$(".nav_in ul li:eq(5)").click(function(){	
+		$("html,body").animate({scrollTop:4400});
+	});
+	$(".nav_in ul li:eq(6)").click(function(){	
+		$("html,body").animate({scrollTop:5700});
+	});
+})();
 
-
+//返回顶部
+$(function(){
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#toTop").fadeIn(1500);
+                }
+                else
+                {
+                    $("#toTop").fadeOut(1500);
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#toTop").click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            });
+        });
+    });
